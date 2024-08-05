@@ -1,9 +1,9 @@
-set file [open "E:/TCL/Input_File.txt" r]
+set file [open "E:/TCL/report.txt" r]
 set data [read $file]
 
 set lines [split $data \n]
 
-set file2 [open "E:/TCL/Input_File_O.txt" w]
+set file2 [open "E:/TCL/reportOut.txt" w]
 
 foreach line $lines {
     if {[regexp -nocase "slack" $line] || [regexp -nocase "setup" $line]} {\
